@@ -15,6 +15,8 @@
     <!-- Css link  -->
     <link rel="stylesheet" href="/UI/css/index.css">
     <style>
+
+      
         body {
             background-color: #ffffff;
             color: #0b1116;
@@ -234,7 +236,7 @@
           </ul>
   
           <!-- Call to Action Button -->
-          <a href="#demo" class="btn btn-primary mt-3">View Prototype</a>
+          <a href="{% url 'crop' %}" class="btn btn-primary mt-3">View Prototype</a>
         </div>
       </div>
     </div>
@@ -248,11 +250,11 @@
       <div class="row align-items-center">
         <!-- Image Column -->
         <div class="col-md-6 mb-4 mb-md-0">
-          <img src="https://via.placeholder.com/600x400" alt="About Us" class="img-fluid rounded">
+          <img src="https://img.freepik.com/free-photo/cultivated-field-from_158595-6241.jpg?t=st=1728214522~exp=1728218122~hmac=054fa0405f4174c869fd86537047915fb1603a2f958b358f24243f4ae6583666&w=1380" alt="About Us" class="img-fluid rounded">
         </div>
         <!-- Content Column -->
         <div class="col-md-6">
-          <h2 class="fw-bold">About <span class="text-primary">AgriVision</span></h2>
+          <h2 class="fw-bold ">About <span class="text-primary">AgriVision</span></h2>
           <p class="text-muted">Empowering farmers with actionable data to make informed decisions for a more sustainable future.</p>
           <p>At AgriVision, we leverage <span class="fw-bold text-primary">NASA's Earth Observation data</span> to provide real-time insights for farmers to optimize crop yields, manage water resources, and ensure sustainability in farming practices.</p>
           <p>Our mission is to make critical information easily accessible, allowing farmers to make smarter decisions, boost productivity, and contribute to global food security.</p>
@@ -280,6 +282,86 @@
     </div>
   </section>
   
+
+
+
+
+  <!-- Team section -->
+<!-- Team Section -->
+<section id="team" class="team-section py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="team-heading poppins-bold"><b> Meet Our <span class="text-primary">Team</span></b></h2>
+      <p class="team-text poppins-regular">We are a group of passionate individuals dedicated to making a positive impact through innovation and technology.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Team Member 1 -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card border-0 shadow">
+          <img src="https://media.licdn.com/dms/image/v2/D4E03AQFrmyzTWWE9PA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1720509473644?e=1733961600&v=beta&t=cQWPm-UumnS3k_rID8vMOC1r_OWFZUFGoJYgNiKWV5A" class="card-img-top" alt="Team Member 1">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary poppins-bold">Bassim</h5>
+            <p class="card-text">Team Lead</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card border-0 shadow">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="Team Member 2">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Muhammed Adhil A</h5>
+            <p class="card-text ">Backend & API Developer</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card border-0 shadow">
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQGofEVMuleXvg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708938421321?e=1733961600&v=beta&t=y7zp4nyOkUcY1haSGw6yRrqRQgMVAEc2NjLRLM1Pdg0" class="card-img-top" alt="Team Member 3">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Muhammed Shamil KP</h5>
+            <p class="card-text">Project Research</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card border-0 shadow">
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQFrOdS8h691Og/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723053424406?e=1733961600&v=beta&t=yuez2QgW_O3Eebamwqu17CMpuyx1YGSYdGhxVb6eon0" class="card-img-top" alt="Team Member 4">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Irfan Fathan M</h5>
+            <p class="card-text">Frontend & Backend Developer</p>
+            <div class="social-icons mt-3">
+              <a href="https://www.linkedin.com/in/irfanfathan" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   
    <!-- Contact Section using Bootstrap 5 -->

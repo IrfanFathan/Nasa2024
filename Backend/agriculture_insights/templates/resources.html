@@ -70,12 +70,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav poppins-regular">
-                        <li class="nav-item"><a class="nav-link" href="#weather">Weather Alert</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#soilMoisture">Soil Moisture</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#irrigation">Irrigation Recommendations</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#cropHealth">Crop Health Monitoring</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
-                    </ul>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'weather' %}">Weather Alert</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'soil' %}">Soil Moisture</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'crop' %}">Irrigation Recommendations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'crophealth' %}">Crop Health Monitoring</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'resources' %}">Resources</a></li>         </ul>
                 </div>
             </div>
         </nav>
