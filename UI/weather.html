@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Weather and Agriculture Insights</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .alert {
+            display: none; /* Hide alerts initially */
+        }
+
+        .kpi-card {
+            transition: transform 0.2s;
+        }
+
+        .kpi-card:hover {
+            transform: scale(1.05);
+        }
+
+        header {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <header class="text-center py-5">
+            <h1>Agriculture Insights</h1>
+            <p>Empowering farmers with data-driven decisions</p>
+            <a href="#soilMoisture" class="btn btn-light btn-lg">Get Started</a>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navigation</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#soilMoisture">Soil Moisture</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#irrigation">Irrigation Recommendations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cropHealth">Crop Health Monitoring</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row my-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Real-Time Weather Updates</div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="weather-location">Location: Not Available</h5>
+                        <p class="card-text" id="weather-details">Loading...</p>
+                        <button id="update-weather" class="btn btn-primary">Update Weather</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Extreme Weather Alerts</div>
+                    <div class="card-body">
+                        <div class="alert alert-warning" id="alert-message"></div>
+                        <p class="card-text">Stay informed about severe weather conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="soilMoisture" class="container my-5">
+            <h2 class="text-center">Soil Moisture Data</h2>
+            <p class="text-center">Access real-time satellite data for soil moisture levels across various regions.</p>
+            <div class="text-center">
+                <button class="btn btn-success">View Soil Moisture Map</button>
+            </div>
+        </section>
+
+        <section id="irrigation" class="container my-5">
+            <h2 class="text-center">Irrigation Recommendations</h2>
+            <p class="text-center">Get personalized irrigation schedules based on real-time moisture levels and weather predictions.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="cropType" class="form-label">Crop Type</label>
+                    <input type="text" class="form-control" id="cropType" placeholder="Enter crop type">
+                </div>
+                <div class="mb-3">
+                    <label for="soilMoistureLevel" class="form-label">Current Soil Moisture Level</label>
+                    <input type="number" class="form-control" id="soilMoistureLevel" placeholder="Enter soil moisture level">
+                </div>
+                <button type="submit" class="btn btn-primary">Get Recommendations</button>
+            </form>
+        </section>
+
+        <section id="cropHealth" class="container my-5">
+            <h2 class="text-center">Crop Health Monitoring</h2>
+            <p class="text-center">Upload images to assess crop health using satellite imagery analysis.</p>
+            <input type="file" class="form-control my-3">
+            <button class="btn btn-success">Analyze Crop Health</button>
+        </section>
+
+        <section id="resources" class="container my-5">
+            <h2 class="text-center">Resources</h2>
+            <p class="text-center">Find educational content and guides on efficient agricultural practices.</p>
+        </section>
+
+        <section class="my-5">
+            <h2>Farmers Dashboard</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card kpi-card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Crop Yield</h5>
+                            <p class="card-text" id="cropYield">1000 kg</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card kpi-card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Moisture Level</h5>
+                            <p class="card-text" id="moistureLevel">25%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card kpi-card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Weather Forecast</h5>
+                            <p class="card-text" id="weatherForecast">Sunny, 30°C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Data-Driven Recommendations</h3>
+            <ul class="list-group" id="recommendations">
+                <li class="list-group-item">Increase irrigation if moisture falls below 20%.</li>
+                <li class="list-group-item">Consider using fertilizers to boost crop yields.</li>
+                <li class="list-group-item">Monitor weather patterns for unexpected changes.</li>
+            </ul>
+        </section>
+
+        <footer class="text-center py-4">
+            <p>&copy; 2024 Agriculture Insights. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Weather API interaction example
+        document.getElementById("update-weather").addEventListener("click", function () {
+            // Replace with your weather API call logic
+            alert("Weather update feature will be implemented here.");
+        });
+    </script>
+</body>
+
+</html>
